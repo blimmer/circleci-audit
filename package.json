@@ -73,5 +73,8 @@
     "oclif"
   ],
   "types": "dist/index.d.ts",
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "yarn@3.3.1",
+  "resolutions": {
+    "@types/node-fetch@~2.6.2": "patch:@types/node-fetch@npm%3A2.6.2#./.yarn/patches/@types-node-fetch-npm-2.6.2-f96c00879e.patch"
+  }
 }

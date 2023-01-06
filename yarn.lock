@@ -1065,13 +1065,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node-fetch@npm:~2.6.2":
+"@types/node-fetch@npm:2.6.2":
   version: 2.6.2
   resolution: "@types/node-fetch@npm:2.6.2"
   dependencies:
     "@types/node": "*"
     form-data: ^3.0.0
   checksum: 6f73b1470000d303d25a6fb92875ea837a216656cb7474f66cdd67bb014aa81a5a11e7ac9c21fe19bee9ecb2ef87c1962bceeaec31386119d1ac86e4c30ad7a6
+  languageName: node
+  linkType: hard
+
+"@types/node-fetch@patch:@types/node-fetch@npm%3A2.6.2#./.yarn/patches/@types-node-fetch-npm-2.6.2-f96c00879e.patch::locator=circleci-audit%40workspace%3A.":
+  version: 2.6.2
+  resolution: "@types/node-fetch@patch:@types/node-fetch@npm%3A2.6.2#./.yarn/patches/@types-node-fetch-npm-2.6.2-f96c00879e.patch::version=2.6.2&hash=89c741&locator=circleci-audit%40workspace%3A."
+  dependencies:
+    "@types/node": "*"
+    form-data: ^3.0.0
+  checksum: e1ca49ab60204fb1d6a2fc7676b78f0cde2e280f0d7c1400998f265db9f6f4049621c713147e276da29745447965c35d5257e7291bd9a204c1a22001f41fe764
   languageName: node
   linkType: hard
 
