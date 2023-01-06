@@ -1,6 +1,6 @@
 {
   "name": "circleci-audit",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A CLI tool using that CircleCI API to audit potentially exposed secrets",
   "author": "Ben Limmer @blimmer",
   "bin": "./bin/run",

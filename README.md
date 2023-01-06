@@ -24,7 +24,7 @@ $ npm install -g circleci-audit
 $ circleci-audit COMMAND
 running command...
 $ circleci-audit (--version)
-circleci-audit/1.0.1 darwin-arm64 node-v18.12.1
+circleci-audit/1.1.0 darwin-arm64 node-v18.12.1
 $ circleci-audit --help [COMMAND]
 USAGE
   $ circleci-audit COMMAND
@@ -42,13 +42,14 @@ Audit CircleCI contexts for exposed secrets
 
 ```
 USAGE
-  $ circleci-audit contexts -o <value> -t <value>
+  $ circleci-audit contexts -o <value> -t <value> [-o csv|table|json]
 
 FLAGS
-  -o, --orgId=<value>  (required) Your organization's ID. Find it on app.circleci.com, click 'Organization Settings'.
-                       It's a UUID.
-  -t, --token=<value>  (required) A CircleCI API token. Generate one here:
-                       https://app.circleci.com/settings/user/tokens.
+  -o, --orgId=<value>                  (required) Your organization's ID. Find it on app.circleci.com, click
+                                       'Organization Settings'. It's a UUID.
+  -o, --outputFormat=(csv|table|json)  [default: table]
+  -t, --token=<value>                  (required) A CircleCI API token. Generate one here:
+                                       https://app.circleci.com/settings/user/tokens.
 
 DESCRIPTION
   Audit CircleCI contexts for exposed secrets
@@ -57,7 +58,7 @@ EXAMPLES
   $ circleci-audit contexts --token $CIRCLECI_TOKEN --orgId YOUR-ORG-UUID
 ```
 
-_See code: [dist/commands/contexts/index.ts](https://github.com/blimmer/circleci-audit/blob/v1.0.1/dist/commands/contexts/index.ts)_
+_See code: [dist/commands/contexts/index.ts](https://github.com/blimmer/circleci-audit/blob/v1.1.0/dist/commands/contexts/index.ts)_
 
 ## `circleci-audit help [COMMAND]`
 
