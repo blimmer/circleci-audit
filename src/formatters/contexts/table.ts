@@ -1,6 +1,6 @@
-import { Formatter } from "../base";
+import { Formatter } from "./base";
 import { table } from "table";
-import { bold } from "chalk";
+import { bold, bgYellow, black } from "chalk";
 
 export class TableFormatter extends Formatter {
   run(): void {
@@ -12,7 +12,9 @@ export class TableFormatter extends Formatter {
       this.auditData[context].forEach((environmentVariable, i) => {
         tableData.push([
           i === 0 ? context : "",
-          environmentVariable.variable,
+          this.isEnvironmentVariableVulnerable(environmentVariable)
+            ? this.warningText(environmentVariable.variable)
+            : environmentVariable.variable,
           environmentVariable.created_at,
         ]);
       });
@@ -26,5 +28,15 @@ export class TableFormatter extends Formatter {
         },
       })
     );
+
+    console.log(
+      `Secrets ${this.warningText(
+        "highlighted"
+      )} were potentially exposed. You should rotate them immediately! https://circleci.com/blog/january-4-2023-security-alert/`
+    );
+  }
+
+  private warningText(text: string): string {
+    return black(bgYellow(text));
   }
 }

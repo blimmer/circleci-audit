@@ -20,6 +20,7 @@
     "@oclif/plugin-plugins": "^2.1.12",
     "abort-controller": "~3.0.0",
     "chalk": "~4.1.2",
+    "date-fns": "^2.29.3",
     "node-fetch": "~2.6.7",
     "table": "^6.8.1"
   },

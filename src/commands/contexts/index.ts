@@ -1,6 +1,6 @@
 import { Command, Flags } from "@oclif/core";
 import { getContextAuditData } from "../../circleci/contexts";
-import { Formatter } from "../../formatters/base";
+import { Formatter } from "../../formatters/contexts/base";
 import { TableFormatter } from "../../formatters/contexts/table";
 
 export default class Contexts extends Command {
