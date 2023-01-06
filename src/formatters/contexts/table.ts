@@ -3,7 +3,7 @@ import { table } from "table";
 import { bold, bgYellow, black } from "chalk";
 
 export class TableFormatter extends Formatter {
-  run(): void {
+  async run(): Promise<void> {
     const tableData = [
       [bold("Context"), bold("Environment Variable"), bold("Last Updated At")],
     ];

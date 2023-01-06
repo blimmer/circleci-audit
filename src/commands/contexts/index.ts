@@ -1,10 +1,12 @@
 import { Command, Flags } from "@oclif/core";
 import { getContextAuditData } from "../../circleci/contexts";
 import { Formatter } from "../../formatters/contexts/base";
+import { CsvFormatter } from "../../formatters/contexts/csv";
 import { JsonFormatter } from "../../formatters/contexts/json";
 import { TableFormatter } from "../../formatters/contexts/table";
 
 const OUTPUT_FORMATTERS = {
+  csv: CsvFormatter,
   table: TableFormatter,
   json: JsonFormatter,
 } as const;
@@ -46,6 +48,6 @@ export default class Contexts extends Command {
       orgId,
       auditData
     );
-    formatter.run();
+    await formatter.run();
   }
 }
