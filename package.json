@@ -17,19 +17,24 @@
   "dependencies": {
     "@oclif/core": "^1.23.1",
     "@oclif/plugin-help": "^5.1.22",
-    "@oclif/plugin-plugins": "^2.1.12"
+    "@oclif/plugin-plugins": "^2.1.12",
+    "abort-controller": "~3.0.0",
+    "node-fetch": "~2.6.7"
   },
   "devDependencies": {
     "@oclif/test": "^2.2.19",
     "@types/chai": "^4.3.4",
     "@types/mocha": "^9.1.1",
     "@types/node": "^16.18.11",
+    "@types/node-fetch": "~2.6.2",
     "chai": "^4.3.7",
     "eslint": "^7.32.0",
     "eslint-config-oclif": "^4.0.0",
     "eslint-config-oclif-typescript": "^1.0.3",
+    "form-data": "~4.0.0",
     "mocha": "^9.2.2",
     "oclif": "^3.4.3",
+    "openapi-typescript-codegen": "^0.23.0",
     "shx": "^0.3.4",
     "ts-node": "^10.9.1",
     "tslib": "^2.4.1",
@@ -51,6 +56,7 @@
     }
   },
   "scripts": {
+    "api-codegen": "openapi --input https://circleci.com/api/v2/openapi.json --output src/circleci/api/generated --client node",
     "build": "shx rm -rf dist && tsc -b",
     "lint": "eslint . --ext .ts --config .eslintrc",
     "postpack": "shx rm -f oclif.manifest.json",
