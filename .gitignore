@@ -7,3 +7,12 @@
 /tmp
 node_modules
 oclif.manifest.json
+
+# Yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

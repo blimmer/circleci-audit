@@ -3,9 +3,7 @@
   "version": "0.0.0",
   "description": "A CLI tool using that CircleCI API to audit potentially exposed secrets",
   "author": "Ben Limmer @blimmer",
-  "bin": {
-    "circleci-audit": "./bin/run"
-  },
+  "bin": "./bin/run",
   "homepage": "https://github.com/blimmer/circleci-audit",
   "license": "MIT",
   "main": "dist/index.js",
@@ -68,5 +66,6 @@
   "keywords": [
     "oclif"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "packageManager": "yarn@3.3.1"
 }
