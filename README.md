@@ -25,7 +25,7 @@ $ npm install -g circleci-audit
 $ circleci-audit COMMAND
 running command...
 $ circleci-audit (--version)
-circleci-audit/0.0.0 darwin-arm64 node-v18.12.1
+circleci-audit/1.0.0 darwin-arm64 node-v18.12.1
 $ circleci-audit --help [COMMAND]
 USAGE
   $ circleci-audit COMMAND
@@ -58,7 +58,7 @@ EXAMPLES
   $ circleci-audit contexts --token $CIRCLECI_TOKEN --orgId YOUR-ORG-UUID
 ```
 
-_See code: [dist/commands/contexts/index.ts](https://github.com/blimmer/circleci-audit/blob/v0.0.0/dist/commands/contexts/index.ts)_
+_See code: [dist/commands/contexts/index.ts](https://github.com/blimmer/circleci-audit/blob/v1.0.0/dist/commands/contexts/index.ts)_
 
 ## `circleci-audit help [COMMAND]`
 
