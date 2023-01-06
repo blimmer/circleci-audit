@@ -589,7 +589,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/color@npm:^1.0.1, @oclif/color@npm:^1.0.2":
+"@oclif/color@npm:^1.0.2":
   version: 1.0.2
   resolution: "@oclif/color@npm:1.0.2"
   dependencies:
@@ -666,12 +666,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/plugin-plugins@npm:^2.1.9":
-  version: 2.1.9
-  resolution: "@oclif/plugin-plugins@npm:2.1.9"
+"@oclif/plugin-plugins@npm:^2.1.12":
+  version: 2.1.12
+  resolution: "@oclif/plugin-plugins@npm:2.1.12"
   dependencies:
-    "@oclif/color": ^1.0.1
-    "@oclif/core": ^1.22.0
+    "@oclif/color": ^1.0.2
+    "@oclif/core": ^1.23.0
     chalk: ^4.1.2
     debug: ^4.3.4
     fs-extra: ^9.0
@@ -681,7 +681,7 @@ __metadata:
     semver: ^7.3.8
     tslib: ^2.4.1
     yarn: ^1.22.18
-  checksum: 93cf4b7818a54b3de943fdc74e01c0a893505d82b7ba92971aa368dc64e5eda03ee672723ca65d9d9edbd3a2c27cb8862bb3703b4365a6114dd30194eca8e130
+  checksum: da47cc74b55f40ebd6fc39591761ab6c05f5392c72a18f5d4da9ef03ce64d2d09f312d7c8089f9ebe319b498bdf0a82c2da266654cafc48cf07e69067c1e2a5c
   languageName: node
   linkType: hard
 
@@ -1826,7 +1826,7 @@ __metadata:
   dependencies:
     "@oclif/core": ^1.23.0
     "@oclif/plugin-help": ^5
-    "@oclif/plugin-plugins": ^2.1.9
+    "@oclif/plugin-plugins": ^2.1.12
     "@oclif/test": ^2.2.17
     "@types/chai": ^4
     "@types/mocha": ^9.0.0
