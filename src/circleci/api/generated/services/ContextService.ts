@@ -94,7 +94,7 @@ export class ContextService {
         /**
          * A token to pass as a `page-token` query parameter to return the next page of results.
          */
-        next_page_token: string;
+        next_page_token: string | null;
     }> {
         return __request(OpenAPI, {
             method: 'GET',
@@ -192,7 +192,7 @@ export class ContextService {
         /**
          * A token to pass as a `page-token` query parameter to return the next page of results.
          */
-        next_page_token: string;
+        next_page_token: string | null;
     }> {
         return __request(OpenAPI, {
             method: 'GET',
