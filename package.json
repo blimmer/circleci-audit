@@ -1,6 +1,6 @@
 {
   "name": "circleci-audit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI tool using that CircleCI API to audit potentially exposed secrets",
   "author": "Ben Limmer @blimmer",
   "bin": "./bin/run",
@@ -71,7 +71,11 @@
   },
   "bugs": "https://github.com/blimmer/circleci-audit/issues",
   "keywords": [
-    "oclif"
+    "circleci",
+    "audit",
+    "security",
+    "contexts",
+    "environment-variables"
   ],
   "types": "dist/index.d.ts",
   "packageManager": "yarn@3.3.1",
