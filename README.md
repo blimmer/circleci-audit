@@ -9,10 +9,9 @@ Secrets that need rotation are highlighted for easy identification.
 ![example output of circleci-audit contexts command](https://user-images.githubusercontent.com/630449/211111479-ab2f8a2c-5200-4ded-8c5e-aee2bce1f753.png)
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
-[![CircleCI](https://circleci.com/gh/oclif/hello-world/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/hello-world/tree/main)
-[![Downloads/week](https://img.shields.io/npm/dw/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
-[![License](https://img.shields.io/npm/l/oclif-hello-world.svg)](https://github.com/oclif/hello-world/blob/main/package.json)
+[![Version](https://img.shields.io/npm/v/blimmer-circleci-audit.svg)](https://npmjs.org/package/circleci-audit)
+[![Downloads/week](https://img.shields.io/npm/dw/blimmer-circleci-audit.svg)](https://npmjs.org/package/circleci-audit)
+[![License](https://img.shields.io/npm/l/blimmer-circleci-audit.svg)](https://github.com/blimmer/circleci-audit/blob/main/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
