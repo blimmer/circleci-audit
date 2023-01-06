@@ -1,7 +1,13 @@
 import { Command, Flags } from "@oclif/core";
 import { getContextAuditData } from "../../circleci/contexts";
 import { Formatter } from "../../formatters/contexts/base";
+import { JsonFormatter } from "../../formatters/contexts/json";
 import { TableFormatter } from "../../formatters/contexts/table";
+
+const OUTPUT_FORMATTERS = {
+  table: TableFormatter,
+  json: JsonFormatter,
+} as const;
 
 export default class Contexts extends Command {
   static description = "Audit CircleCI contexts for exposed secrets";
@@ -23,15 +29,23 @@ export default class Contexts extends Command {
         "A CircleCI API token. Generate one here: https://app.circleci.com/settings/user/tokens.",
       required: true,
     }),
+    outputFormat: Flags.enum({
+      char: "o",
+      options: Object.keys(OUTPUT_FORMATTERS),
+      default: "table",
+    }),
   };
 
   async run(): Promise<void> {
-    const {
-      flags: { orgId, token },
-    } = await this.parse(Contexts);
+    const { flags } = await this.parse(Contexts);
+    const { orgId, token } = flags;
+    const outputFormat = flags.outputFormat as keyof typeof OUTPUT_FORMATTERS;
 
     const auditData = await getContextAuditData(orgId, token);
-    const formatter: Formatter = new TableFormatter(orgId, auditData);
+    const formatter: Formatter = new OUTPUT_FORMATTERS[outputFormat](
+      orgId,
+      auditData
+    );
     formatter.run();
   }
 }
