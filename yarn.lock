@@ -621,7 +621,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/core@npm:^1.20.3, @oclif/core@npm:^1.20.4, @oclif/core@npm:^1.21.0, @oclif/core@npm:^1.23.0":
+"@oclif/core@npm:^1.20.3, @oclif/core@npm:^1.20.4, @oclif/core@npm:^1.21.0":
   version: 1.23.0
   resolution: "@oclif/core@npm:1.23.0"
   dependencies:
@@ -727,25 +727,6 @@ __metadata:
     fast-levenshtein: ^3.0.0
     lodash: ^4.17.21
   checksum: 79852aa0bf5a8d05e0938df93bf554bea32193e1d8e23f88729034ddcc8154cdbbb8a2002eb626d626a1bd8fb2b92dad83cd7d0cdd13877843d97cb44be7bfa7
-  languageName: node
-  linkType: hard
-
-"@oclif/plugin-plugins@npm:^2.1.12":
-  version: 2.1.12
-  resolution: "@oclif/plugin-plugins@npm:2.1.12"
-  dependencies:
-    "@oclif/color": ^1.0.2
-    "@oclif/core": ^1.23.0
-    chalk: ^4.1.2
-    debug: ^4.3.4
-    fs-extra: ^9.0
-    http-call: ^5.2.2
-    load-json-file: ^5.3.0
-    npm-run-path: ^4.0.1
-    semver: ^7.3.8
-    tslib: ^2.4.1
-    yarn: ^1.22.18
-  checksum: da47cc74b55f40ebd6fc39591761ab6c05f5392c72a18f5d4da9ef03ce64d2d09f312d7c8089f9ebe319b498bdf0a82c2da266654cafc48cf07e69067c1e2a5c
   languageName: node
   linkType: hard
 
@@ -1947,7 +1928,6 @@ __metadata:
   dependencies:
     "@oclif/core": ^1.23.1
     "@oclif/plugin-help": ^5.1.22
-    "@oclif/plugin-plugins": ^2.1.12
     "@oclif/test": ^2.2.19
     "@types/chai": ^4.3.4
     "@types/mocha": ^9.1.1
@@ -3229,7 +3209,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:^9.0, fs-extra@npm:^9.0.1, fs-extra@npm:^9.1.0":
+"fs-extra@npm:^9.0.1, fs-extra@npm:^9.1.0":
   version: 9.1.0
   resolution: "fs-extra@npm:9.1.0"
   dependencies:
@@ -3529,7 +3509,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graceful-fs@npm:^4.1.15, graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0":
+"graceful-fs@npm:^4.1.2, graceful-fs@npm:^4.1.6, graceful-fs@npm:^4.2.0":
   version: 4.2.8
   resolution: "graceful-fs@npm:4.2.8"
   checksum: 5d224c8969ad0581d551dfabdb06882706b31af2561bd5e2034b4097e67cc27d05232849b8643866585fd0a41c7af152950f8776f4dd5579e9853733f31461c6
@@ -4431,19 +4411,6 @@ __metadata:
   version: 1.2.4
   resolution: "lines-and-columns@npm:1.2.4"
   checksum: 0c37f9f7fa212b38912b7145e1cd16a5f3cd34d782441c3e6ca653485d326f58b3caccda66efce1c5812bde4961bbde3374fae4b0d11bf1226152337f3894aa5
-  languageName: node
-  linkType: hard
-
-"load-json-file@npm:^5.3.0":
-  version: 5.3.0
-  resolution: "load-json-file@npm:5.3.0"
-  dependencies:
-    graceful-fs: ^4.1.15
-    parse-json: ^4.0.0
-    pify: ^4.0.1
-    strip-bom: ^3.0.0
-    type-fest: ^0.3.0
-  checksum: 8bf15599db9471e264d916f98f1f51eb5d1e6a26d0ec3711d17df54d5983ccba1a0a4db2a6490bb27171f1261b72bf237d557f34e87d26e724472b92bdbdd4f7
   languageName: node
   linkType: hard
 
@@ -6810,13 +6777,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:^0.3.0":
-  version: 0.3.1
-  resolution: "type-fest@npm:0.3.1"
-  checksum: 347ff46c2285616635cb59f722e7f396bee81b8988b6fc1f1536b725077f2abf6ccfa22ab7a78e9b6ce7debea0e6614bbf5946cbec6674ec1bde12113af3a65c
-  languageName: node
-  linkType: hard
-
 "type-fest@npm:^0.6.0":
   version: 0.6.0
   resolution: "type-fest@npm:0.6.0"
@@ -7287,16 +7247,6 @@ __metadata:
     y18n: ^5.0.5
     yargs-parser: ^21.0.0
   checksum: 00d58a2c052937fa044834313f07910fd0a115dec5ee35919e857eeee3736b21a4eafa8264535800ba8bac312991ce785ecb8a51f4d2cc8c4676d865af1cfbde
-  languageName: node
-  linkType: hard
-
-"yarn@npm:^1.22.18":
-  version: 1.22.19
-  resolution: "yarn@npm:1.22.19"
-  bin:
-    yarn: bin/yarn.js
-    yarnpkg: bin/yarn.js
-  checksum: b43d2cc5fee7e933beb12a8aee7dfceca9e9ef2dd17c5d04d15a12ab7bec5f5744ea34a07b86e013da7f291a18c4e1ad8f70e150f5ed2f4666e6723c7f0a8452
   languageName: node
   linkType: hard
 

@@ -17,7 +17,6 @@
   "dependencies": {
     "@oclif/core": "^1.23.1",
     "@oclif/plugin-help": "^5.1.22",
-    "@oclif/plugin-plugins": "^2.1.12",
     "abort-controller": "~3.0.0",
     "chalk": "~4.1.2",
     "date-fns": "^2.29.3",
@@ -48,8 +47,7 @@
     "dirname": "circleci-audit",
     "commands": "./dist/commands",
     "plugins": [
-      "@oclif/plugin-help",
-      "@oclif/plugin-plugins"
+      "@oclif/plugin-help"
     ],
     "topicSeparator": " ",
     "topics": {
