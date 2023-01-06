@@ -4,6 +4,10 @@ circleci-audit
 This is a simple tool that helps audit CircleCI context environment variables need to be rotated in response
 to the [January 4, 2023 security incident](https://circleci.com/blog/january-4-2023-security-alert/).
 
+Secrets that need rotation are highlighted for easy identification.
+
+![example output of circleci-audit contexts command](https://user-images.githubusercontent.com/630449/211111479-ab2f8a2c-5200-4ded-8c5e-aee2bce1f753.png)
+
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
 [![CircleCI](https://circleci.com/gh/oclif/hello-world/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/hello-world/tree/main)
