@@ -1884,7 +1884,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0, chalk@npm:^4.0.2, chalk@npm:^4.1.0, chalk@npm:^4.1.1, chalk@npm:^4.1.2":
+"chalk@npm:^4.0.0, chalk@npm:^4.0.2, chalk@npm:^4.1.0, chalk@npm:^4.1.1, chalk@npm:^4.1.2, chalk@npm:~4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -1955,6 +1955,7 @@ __metadata:
     "@types/node-fetch": ~2.6.2
     abort-controller: ~3.0.0
     chai: ^4.3.7
+    chalk: ~4.1.2
     eslint: ^7.32.0
     eslint-config-oclif: ^4.0.0
     eslint-config-oclif-typescript: ^1.0.3
@@ -1964,6 +1965,7 @@ __metadata:
     oclif: ^3.4.3
     openapi-typescript-codegen: ^0.23.0
     shx: ^0.3.4
+    table: ^6.8.1
     ts-node: ^10.9.1
     tslib: ^2.4.1
     typescript: ^4.9.4
@@ -6596,6 +6598,19 @@ __metadata:
     string-width: ^4.2.3
     strip-ansi: ^6.0.1
   checksum: 76d01e33d6ef881f21bfe2e343101cb05ef4cedf506523d187af4f3a33f0f69cf25bca3e05c0c5c0eb348b405aaac29d9bb308ba9bf2c5ca7a82d032382a1649
+  languageName: node
+  linkType: hard
+
+"table@npm:^6.8.1":
+  version: 6.8.1
+  resolution: "table@npm:6.8.1"
+  dependencies:
+    ajv: ^8.0.1
+    lodash.truncate: ^4.4.2
+    slice-ansi: ^4.0.0
+    string-width: ^4.2.3
+    strip-ansi: ^6.0.1
+  checksum: 08249c7046125d9d0a944a6e96cfe9ec66908d6b8a9db125531be6eb05fa0de047fd5542e9d43b4f987057f00a093b276b8d3e19af162a9c40db2681058fd306
   languageName: node
   linkType: hard
 

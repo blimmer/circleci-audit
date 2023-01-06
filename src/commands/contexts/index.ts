@@ -1,5 +1,7 @@
 import { Command, Flags } from "@oclif/core";
 import { getContextAuditData } from "../../circleci/contexts";
+import { Formatter } from "../../formatters/base";
+import { TableFormatter } from "../../formatters/contexts/table";
 
 export default class Contexts extends Command {
   static description = "Audit CircleCI contexts for exposed secrets";
@@ -29,5 +31,7 @@ export default class Contexts extends Command {
     } = await this.parse(Contexts);
 
     const auditData = await getContextAuditData(orgId, token);
+    const formatter: Formatter = new TableFormatter(orgId, auditData);
+    formatter.run();
   }
 }
