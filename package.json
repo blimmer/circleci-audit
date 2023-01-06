@@ -17,19 +17,26 @@
   "dependencies": {
     "@oclif/core": "^1.23.1",
     "@oclif/plugin-help": "^5.1.22",
-    "@oclif/plugin-plugins": "^2.1.12"
+    "abort-controller": "~3.0.0",
+    "chalk": "~4.1.2",
+    "date-fns": "^2.29.3",
+    "node-fetch": "~2.6.7",
+    "table": "^6.8.1"
   },
   "devDependencies": {
     "@oclif/test": "^2.2.19",
     "@types/chai": "^4.3.4",
     "@types/mocha": "^9.1.1",
     "@types/node": "^16.18.11",
+    "@types/node-fetch": "~2.6.2",
     "chai": "^4.3.7",
     "eslint": "^7.32.0",
     "eslint-config-oclif": "^4.0.0",
     "eslint-config-oclif-typescript": "^1.0.3",
+    "form-data": "~4.0.0",
     "mocha": "^9.2.2",
     "oclif": "^3.4.3",
+    "openapi-typescript-codegen": "^0.23.0",
     "shx": "^0.3.4",
     "ts-node": "^10.9.1",
     "tslib": "^2.4.1",
@@ -40,8 +47,7 @@
     "dirname": "circleci-audit",
     "commands": "./dist/commands",
     "plugins": [
-      "@oclif/plugin-help",
-      "@oclif/plugin-plugins"
+      "@oclif/plugin-help"
     ],
     "topicSeparator": " ",
     "topics": {
@@ -51,6 +57,7 @@
     }
   },
   "scripts": {
+    "api-codegen": "openapi --input https://circleci.com/api/v2/openapi.json --output src/circleci/api/generated --client node",
     "build": "shx rm -rf dist && tsc -b",
     "lint": "eslint . --ext .ts --config .eslintrc",
     "postpack": "shx rm -f oclif.manifest.json",
@@ -67,5 +74,8 @@
     "oclif"
   ],
   "types": "dist/index.d.ts",
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "yarn@3.3.1",
+  "resolutions": {
+    "@types/node-fetch@~2.6.2": "patch:@types/node-fetch@npm%3A2.6.2#./.yarn/patches/@types-node-fetch-npm-2.6.2-f96c00879e.patch"
+  }
 }

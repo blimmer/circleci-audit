@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "declaration": true,
+    "esModuleInterop": true,
     "importHelpers": true,
     "module": "commonjs",
     "outDir": "dist",
@@ -8,7 +9,5 @@
     "strict": true,
     "target": "es2019"
   },
-  "include": [
-    "src/**/*"
-  ]
+  "include": ["src/**/*"]
 }

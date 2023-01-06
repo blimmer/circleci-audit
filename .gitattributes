@@ -1,0 +1,1 @@
+src/circleci/api/generated/* -diff linguist-generated=true
