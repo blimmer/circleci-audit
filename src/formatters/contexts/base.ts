@@ -4,7 +4,7 @@ import { ContextAuditData } from "../../circleci/contexts";
 export abstract class Formatter {
   constructor(protected orgId: string, protected auditData: ContextAuditData) {}
 
-  abstract run(): void;
+  abstract run(): Promise<void>;
 
   private securityIncidentEpoch = new Date("2023-01-05T00:00:00.000Z");
   protected isEnvironmentVariableVulnerable(

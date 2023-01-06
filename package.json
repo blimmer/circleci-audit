@@ -19,6 +19,7 @@
     "@oclif/plugin-help": "^5.1.22",
     "abort-controller": "~3.0.0",
     "chalk": "~4.1.2",
+    "csv-writer": "^1.6.0",
     "date-fns": "^2.29.3",
     "form-data": "~4.0.0",
     "node-fetch": "~2.6.7",
