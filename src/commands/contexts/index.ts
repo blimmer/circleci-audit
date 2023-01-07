@@ -14,21 +14,17 @@ const OUTPUT_FORMATTERS = {
 export default class Contexts extends Command {
   static description = "Audit CircleCI contexts for exposed secrets";
 
-  static examples = [
-    `$ circleci-audit contexts --token $CIRCLECI_TOKEN --orgId YOUR-ORG-UUID`,
-  ];
+  static examples = [`$ circleci-audit contexts --token $CIRCLECI_TOKEN --orgId YOUR-ORG-UUID`];
 
   static flags = {
     orgId: Flags.string({
       char: "o",
-      description:
-        "Your organization's ID. Find it on app.circleci.com, click 'Organization Settings'. It's a UUID.",
+      description: "Your organization's ID. Find it on app.circleci.com, click 'Organization Settings'. It's a UUID.",
       required: true,
     }),
     token: Flags.string({
       char: "t",
-      description:
-        "A CircleCI API token. Generate one here: https://app.circleci.com/settings/user/tokens.",
+      description: "A CircleCI API token. Generate one here: https://app.circleci.com/settings/user/tokens.",
       required: true,
     }),
     outputFormat: Flags.enum({
@@ -44,10 +40,7 @@ export default class Contexts extends Command {
     const outputFormat = flags.outputFormat as keyof typeof OUTPUT_FORMATTERS;
 
     const auditData = await getContextAuditData(orgId, token);
-    const formatter: Formatter = new OUTPUT_FORMATTERS[outputFormat](
-      orgId,
-      auditData
-    );
+    const formatter: Formatter = new OUTPUT_FORMATTERS[outputFormat](orgId, auditData);
     await formatter.run();
   }
 }

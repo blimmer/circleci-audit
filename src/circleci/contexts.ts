@@ -17,9 +17,7 @@ export async function getContextAuditData(orgId: string, token: string) {
   const contextAuditData: ContextAuditData = {};
   await Promise.all(
     contexts.map(async (context) => {
-      const environmentVariables = await getEnvironmentVariablesInContext(
-        context
-      );
+      const environmentVariables = await getEnvironmentVariablesInContext(context);
       contextAuditData[context.name] = environmentVariables;
     })
   );
@@ -39,9 +37,7 @@ async function fetchContexts(orgId: string): Promise<Context[]> {
   return contexts;
 }
 
-async function getEnvironmentVariablesInContext(
-  context: Context
-): Promise<EnvironmentVariable[]> {
+async function getEnvironmentVariablesInContext(context: Context): Promise<EnvironmentVariable[]> {
   const environmentVariables: EnvironmentVariable[] = [];
 
   let response: ListEnvironmentVariablesFromContextResponse = {
@@ -49,9 +45,7 @@ async function getEnvironmentVariablesInContext(
     next_page_token: null,
   };
   do {
-    response = await ContextService.listEnvironmentVariablesFromContext(
-      context.id
-    );
+    response = await ContextService.listEnvironmentVariablesFromContext(context.id);
     environmentVariables.push(...response.items);
   } while (response.next_page_token !== null);
 
