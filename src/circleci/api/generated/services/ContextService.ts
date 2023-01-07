@@ -74,7 +74,7 @@ export class ContextService {
     ownerId?: string,
     ownerSlug?: string,
     ownerType?: "account" | "organization",
-    pageToken?: string
+    pageToken?: string | null
   ): CancelablePromise<{
     items: Array<{
       /**
@@ -168,7 +168,7 @@ export class ContextService {
    */
   public static listEnvironmentVariablesFromContext(
     contextId: string,
-    pageToken?: string
+    pageToken?: string | null
   ): CancelablePromise<{
     items: Array<{
       /**

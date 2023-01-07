@@ -30,7 +30,7 @@ async function fetchContexts(orgId: string): Promise<Context[]> {
   let response: ListContextsResponse = { items: [], next_page_token: null };
 
   do {
-    response = await ContextService.listContexts(orgId);
+    response = await ContextService.listContexts(orgId, undefined, undefined, response.next_page_token);
     contexts.push(...response.items);
   } while (response.next_page_token !== null);
 
@@ -45,7 +45,7 @@ async function getEnvironmentVariablesInContext(context: Context): Promise<Envir
     next_page_token: null,
   };
   do {
-    response = await ContextService.listEnvironmentVariablesFromContext(context.id);
+    response = await ContextService.listEnvironmentVariablesFromContext(context.id, response.next_page_token);
     environmentVariables.push(...response.items);
   } while (response.next_page_token !== null);
 
