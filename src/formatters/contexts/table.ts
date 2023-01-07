@@ -4,9 +4,7 @@ import { bold, bgYellow, black } from "chalk";
 
 export class TableFormatter extends Formatter {
   async run(): Promise<void> {
-    const tableData = [
-      [bold("Context"), bold("Environment Variable"), bold("Last Updated At")],
-    ];
+    const tableData = [[bold("Context"), bold("Environment Variable"), bold("Last Updated At")]];
 
     for (const context in this.auditData) {
       this.auditData[context].forEach((environmentVariable, i) => {

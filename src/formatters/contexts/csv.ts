@@ -15,8 +15,7 @@ export class CsvFormatter extends Formatter {
       ],
     });
 
-    const records: Array<{ context: string; var: string; timestamp: string }> =
-      [];
+    const records: Array<{ context: string; var: string; timestamp: string }> = [];
 
     for (const context in this.auditData) {
       this.auditData[context].forEach((environmentVariable, i) => {
