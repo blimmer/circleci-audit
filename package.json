@@ -96,6 +96,6 @@
   "lint-staged": {
     "*.ts": "eslint --cache --fix",
     "*.{js,css,md}": "prettier --write",
-    "src/commands/**/\\*.ts": "oclif readme && git add README.md"
+    "src/commands/**/*.ts": "yarn prepack && git add README.md"
   }
 }
