@@ -1,5 +1,4 @@
-circleci-audit
-=================
+# circleci-audit
 
 This is a simple tool that helps audit CircleCI context environment variables need to be rotated in response
 to the [January 4, 2023 security incident](https://circleci.com/blog/january-4-2023-security-alert/).
@@ -14,24 +13,29 @@ Secrets that need rotation are highlighted for easy identification.
 [![License](https://img.shields.io/npm/l/blimmer-circleci-audit.svg)](https://github.com/blimmer/circleci-audit/blob/main/package.json)
 
 <!-- toc -->
+* [circleci-audit](#circleci-audit)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
 ```sh-session
 $ npm install -g circleci-audit
 $ circleci-audit COMMAND
 running command...
 $ circleci-audit (--version)
-circleci-audit/1.1.0 darwin-arm64 node-v18.12.1
+circleci-audit/0.0.0-development darwin-arm64 node-v18.12.1
 $ circleci-audit --help [COMMAND]
 USAGE
   $ circleci-audit COMMAND
 ...
 ```
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
 * [`circleci-audit contexts`](#circleci-audit-contexts)
 * [`circleci-audit help [COMMAND]`](#circleci-audit-help-command)
@@ -58,7 +62,7 @@ EXAMPLES
   $ circleci-audit contexts --token $CIRCLECI_TOKEN --orgId YOUR-ORG-UUID
 ```
 
-_See code: [dist/commands/contexts/index.ts](https://github.com/blimmer/circleci-audit/blob/v1.1.0/dist/commands/contexts/index.ts)_
+_See code: [dist/commands/contexts/index.ts](https://github.com/blimmer/circleci-audit/blob/v0.0.0-development/dist/commands/contexts/index.ts)_
 
 ## `circleci-audit help [COMMAND]`
 

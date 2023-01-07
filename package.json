@@ -36,9 +36,12 @@
     "@typescript-eslint/parser": "^5.48.0",
     "chai": "^4.3.7",
     "eslint": "^8.31.0",
+    "husky": ">=6",
+    "lint-staged": ">=10",
     "mocha": "^9.2.2",
     "oclif": "^3.4.3",
     "openapi-typescript-codegen": "^0.23.0",
+    "pinst": ">=2",
     "prettier": "^2.8.1",
     "semantic-release": "^20.0.0",
     "shx": "^0.3.4",
@@ -69,7 +72,10 @@
     "prepack": "yarn build && oclif manifest && oclif readme",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif readme && git add README.md",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable"
   },
   "engines": {
     "node": ">=12.0.0"
@@ -86,5 +92,9 @@
   "packageManager": "yarn@3.3.1",
   "resolutions": {
     "@types/node-fetch@~2.6.2": "patch:@types/node-fetch@npm%3A2.6.2#./.yarn/patches/@types-node-fetch-npm-2.6.2-f96c00879e.patch"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
   }
 }
