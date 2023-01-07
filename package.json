@@ -63,7 +63,7 @@
   "scripts": {
     "api-codegen": "openapi --input https://circleci.com/api/v2/openapi.json --output src/circleci/api/generated --client node",
     "build": "shx rm -rf dist && tsc -b",
-    "lint": "eslint . --ext .ts --config .eslintrc.cjs",
+    "lint": "eslint src/ --ext .ts --config .eslintrc.cjs",
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "yarn lint",
     "prepack": "yarn build && oclif manifest && oclif readme",

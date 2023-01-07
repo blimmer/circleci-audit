@@ -1,7 +1,7 @@
 import { Formatter } from "./base";
 
 export class JsonFormatter extends Formatter {
-  async run(): Promise<void> {
+  run(): void {
     console.log(JSON.stringify(this.auditData, null, 2));
   }
 }
