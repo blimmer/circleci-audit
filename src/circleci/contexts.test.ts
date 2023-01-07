@@ -53,4 +53,31 @@ describe("contexts", () => {
       context2: [{ context_id: "2", variable: "bar", created_at: now.toISOString() }],
     });
   });
+
+  it("can handle paginated list env variable responses", async () => {
+    jest.spyOn(ContextService, "listContexts").mockResolvedValueOnce({
+      items: [{ id: "1", name: "context1", created_at: now.toISOString() }],
+      next_page_token: null,
+    });
+
+    when(jest.spyOn(ContextService, "listEnvironmentVariablesFromContext"))
+      .calledWith("1", null)
+      .mockResolvedValueOnce({
+        items: [{ context_id: "1", variable: "foo", created_at: now.toISOString() }],
+        next_page_token: "list-env-vars-next-page-token",
+      })
+      .calledWith("1", "list-env-vars-next-page-token")
+      .mockResolvedValueOnce({
+        items: [{ context_id: "1", variable: "bar", created_at: now.toISOString() }],
+        next_page_token: null,
+      });
+
+    const contextAuditData = await getContextAuditData("myOrgId", "myToken");
+    expect(contextAuditData).toEqual({
+      context1: [
+        { context_id: "1", variable: "foo", created_at: now.toISOString() },
+        { context_id: "1", variable: "bar", created_at: now.toISOString() },
+      ],
+    });
+  });
 });
