@@ -1,3 +1,0 @@
-describe("contexts command", () => {
-  // TODO
-});
