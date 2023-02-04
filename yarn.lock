@@ -1286,6 +1286,42 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@oclif/core@npm:^2.0.7":
+  version: 2.0.8
+  resolution: "@oclif/core@npm:2.0.8"
+  dependencies:
+    "@types/cli-progress": ^3.11.0
+    ansi-escapes: ^4.3.2
+    ansi-styles: ^4.3.0
+    cardinal: ^2.1.1
+    chalk: ^4.1.2
+    clean-stack: ^3.0.1
+    cli-progress: ^3.10.0
+    debug: ^4.3.4
+    ejs: ^3.1.6
+    fs-extra: ^9.1.0
+    get-package-type: ^0.1.0
+    globby: ^11.1.0
+    hyperlinker: ^1.0.0
+    indent-string: ^4.0.0
+    is-wsl: ^2.2.0
+    js-yaml: ^3.14.1
+    natural-orderby: ^2.0.3
+    object-treeify: ^1.1.33
+    password-prompt: ^1.1.2
+    semver: ^7.3.7
+    string-width: ^4.2.3
+    strip-ansi: ^6.0.1
+    supports-color: ^8.1.1
+    supports-hyperlinks: ^2.2.0
+    tslib: ^2.4.1
+    widest-line: ^3.1.0
+    wordwrap: ^1.0.0
+    wrap-ansi: ^7.0.0
+  checksum: e3736c78d61c696d1f6eafa6084e50ea56a2d7c948a5c23cff5372a571055316539665b70403f90597d11c08cfb920f76fed074eb9a2b5d6ed0498a2b0fec63f
+  languageName: node
+  linkType: hard
+
 "@oclif/linewrap@npm:^1.0.0":
   version: 1.0.0
   resolution: "@oclif/linewrap@npm:1.0.0"
@@ -1345,13 +1381,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/test@npm:^2.2.19":
-  version: 2.2.19
-  resolution: "@oclif/test@npm:2.2.19"
+"@oclif/test@npm:^2.3.4":
+  version: 2.3.4
+  resolution: "@oclif/test@npm:2.3.4"
   dependencies:
-    "@oclif/core": ^1.23.1
-    fancy-test: ^2.0.10
-  checksum: b2a31910e4c0536452c4712331257d05ca13229be6018029b27ff9fbd55e566ae23cc6714c217009409136dd61987dda4bab073d042fa96a9b92603dd70b0dd8
+    "@oclif/core": ^2.0.7
+    fancy-test: ^2.0.12
+  checksum: bd0a20a6d402e0581018e5e0d40df0346d591934f70f505898ceb1e2073897180004ddc249b47c833103ff9c7d9ec0a5d80b45c5f656ad7f85ef647523131e6d
   languageName: node
   linkType: hard
 
@@ -1850,6 +1886,15 @@ __metadata:
   version: 4.3.4
   resolution: "@types/chai@npm:4.3.4"
   checksum: 571184967beb03bf64c4392a13a7d44e72da9af5a1e83077ff81c39cf59c0fda2a5c78d2005084601cf8f3d11726608574d8b5b4a0e3e9736792807afd926cd0
+  languageName: node
+  linkType: hard
+
+"@types/cli-progress@npm:^3.11.0":
+  version: 3.11.0
+  resolution: "@types/cli-progress@npm:3.11.0"
+  dependencies:
+    "@types/node": "*"
+  checksum: d4401622333e888925b47c5d5bb0b89dddae17cc020f909a64ad7275b326bf3c6e9cd467f625a197fd958a1e49220d32f4a2b0bf2948fee330c719a9b985674e
   languageName: node
   linkType: hard
 
@@ -3133,7 +3178,7 @@ __metadata:
   dependencies:
     "@oclif/core": ^1.23.1
     "@oclif/plugin-help": ^5.1.22
-    "@oclif/test": ^2.2.19
+    "@oclif/test": ^2.3.4
     "@types/chai": ^4.3.4
     "@types/jest": ^29.2.5
     "@types/jest-when": ^3
@@ -4364,9 +4409,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fancy-test@npm:^2.0.10":
-  version: 2.0.10
-  resolution: "fancy-test@npm:2.0.10"
+"fancy-test@npm:^2.0.12":
+  version: 2.0.12
+  resolution: "fancy-test@npm:2.0.12"
   dependencies:
     "@types/chai": "*"
     "@types/lodash": "*"
@@ -4374,9 +4419,9 @@ __metadata:
     "@types/sinon": "*"
     lodash: ^4.17.13
     mock-stdin: ^1.0.0
-    nock: ^13.0.0
+    nock: ^13.3.0
     stdout-stderr: ^0.1.9
-  checksum: fcbb7b0f4ec81cbfb5ce53b4d8eec0c11a471d543eef75905f952f31bfaaaa1c0b81c20338ba6fff804dc865f14aaf2c1e43e5fdab3b9ca2bb321f400ba51084
+  checksum: 4bfc3f3e5ae104a19245aa0dc34ade394ede2dc9d5f518198e128eba0382ec344b005a55706d17fda03d3007919fc7d4c37a192e32109ed373338439c790da74
   languageName: node
   linkType: hard
 
@@ -6921,13 +6966,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.set@npm:^4.3.2":
-  version: 4.3.2
-  resolution: "lodash.set@npm:4.3.2"
-  checksum: a9122f49eef9f2d0fc9061a33d87f8e5b8c6b23d46e8b9e9ce1529d3588d79741bd1145a3abdfa3b13082703e65af27ff18d8a07bfc22b9be32f3fc36f763f70
-  languageName: node
-  linkType: hard
-
 "lodash.truncate@npm:^4.4.2":
   version: 4.4.2
   resolution: "lodash.truncate@npm:4.4.2"
@@ -7545,15 +7583,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nock@npm:^13.0.0":
-  version: 13.2.1
-  resolution: "nock@npm:13.2.1"
+"nock@npm:^13.3.0":
+  version: 13.3.0
+  resolution: "nock@npm:13.3.0"
   dependencies:
     debug: ^4.1.0
     json-stringify-safe: ^5.0.1
-    lodash.set: ^4.3.2
+    lodash: ^4.17.21
     propagate: ^2.0.0
-  checksum: b401fb8143ca88095ee34c715e2806eda2813dace4f4c4798961ad961c18003d1529f4507a79c429d2c3c768e136632ee19ee9ebfef71f0cb022df152594df1d
+  checksum: 118d04e95a17f493898a82b5dfecc03762776e1980d9c3b2077479747e60b77109c5f7c0df969d1a8f6039260abe5961733553a5841f0f627bb35238576a0009
   languageName: node
   linkType: hard
 
