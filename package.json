@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "@oclif/core": "^1.23.1",
-    "@oclif/plugin-help": "^5.1.22",
+    "@oclif/plugin-help": "^5.2.5",
     "abort-controller": "~3.0.0",
     "chalk": "~4.1.2",
     "csv-writer": "^1.6.0",
